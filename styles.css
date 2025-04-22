@@ -1,8 +1,17 @@
-body {
+:root {
+    --color-1: #112540;
+    --color-2: #3A5880;
+    --color-3: #F59BA3;
+    --color-4: #FCD8DC;
+    --color-5: #ABABAB;
+    --color-6: #FFFFFF;
+  }
+  
+  body {
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: #fff0f6;
-    color: #333;
+    background: linear-gradient(to bottom right, var(--color-4), var(--color-2), var(--color-1));
+    color: var(--color-1);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -12,27 +21,29 @@ body {
   }
   
   .coming-soon-container {
-    background: linear-gradient(135deg, #ffe3ec, #e0f0ff);
+    background: rgba(255, 255, 255, 0.85);
     padding: 4rem 2rem;
     border-radius: 1rem;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    max-width: 600px;
+    margin: 1rem;
   }
   
   .coming-soon-container h1 {
-    color: #ff69b4;
+    color: var(--color-2);
     font-size: 3rem;
     margin-bottom: 0.5rem;
   }
   
   .coming-soon-container h2 {
-    color: #5c5c8a;
+    color: var(--color-3);
     font-size: 2rem;
     margin-bottom: 1rem;
   }
   
   .coming-soon-container p {
     font-size: 1.1rem;
-    color: #444;
+    color: var(--color-1);
     margin-bottom: 1.5rem;
   }
   
@@ -46,16 +57,16 @@ body {
   input[type="email"] {
     padding: 0.75rem 1rem;
     border-radius: 25px;
-    border: 1px solid #ccc;
+    border: 1px solid var(--color-5);
     min-width: 250px;
     font-size: 1rem;
   }
   
   button {
-    background-color: #d0e2ff;
+    background-color: var(--color-2);
     border: none;
     padding: 0.75rem 1.5rem;
-    color: #004085;
+    color: var(--color-6);
     font-size: 1rem;
     border-radius: 25px;
     cursor: pointer;
@@ -63,11 +74,11 @@ body {
   }
   
   button:hover {
-    background-color: #b3d7ff;
+    background-color: var(--color-1);
   }
   
   footer {
     margin-top: 2rem;
-    color: #888;
+    color: var(--color-6);
     font-size: 0.9rem;
   }
