@@ -1,0 +1,73 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #fff0f6;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+  }
+  
+  .coming-soon-container {
+    background: linear-gradient(135deg, #ffe3ec, #e0f0ff);
+    padding: 4rem 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+  
+  .coming-soon-container h1 {
+    color: #ff69b4;
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .coming-soon-container h2 {
+    color: #5c5c8a;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .coming-soon-container p {
+    font-size: 1.1rem;
+    color: #444;
+    margin-bottom: 1.5rem;
+  }
+  
+  form {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  
+  input[type="email"] {
+    padding: 0.75rem 1rem;
+    border-radius: 25px;
+    border: 1px solid #ccc;
+    min-width: 250px;
+    font-size: 1rem;
+  }
+  
+  button {
+    background-color: #d0e2ff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    color: #004085;
+    font-size: 1rem;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #b3d7ff;
+  }
+  
+  footer {
+    margin-top: 2rem;
+    color: #888;
+    font-size: 0.9rem;
+  }
