@@ -29,6 +29,42 @@
     height: 100vh;
     text-align: center;
     font-family: Nunito;
+    overflow: hidden;
+    position: relative; 
+  }
+
+  .sparkle {
+    position: absolute;
+    width: 12px; 
+    height: 12px; 
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5); 
+    pointer-events: none; 
+    animation: float 8s linear infinite, twinkle 3s linear infinite;
+  }
+
+  @keyframes float {
+    0% {
+      transform: translateY(0) translateX(0);
+    }
+    50% {
+      transform: translateY(10px) translateX(5px);
+    }
+    100% {
+      transform: translateY(0) translateX(0);
+    }
+  }
+
+  @keyframes twinkle {
+    0% {
+      opacity: 0.5;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0.5;
+    }
   }
   
   .coming-soon-container {
@@ -74,6 +110,7 @@
     border: 1px solid var(--color-5);
     min-width: 250px;
     font-size: 1rem;
+    font-family: Nunito;
   }
   
   button {
@@ -85,6 +122,7 @@
     border-radius: 25px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    font-family: Nunito;
   }
   
   button:hover {
