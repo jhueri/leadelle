@@ -22,12 +22,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById('notify-form');
   
     form.addEventListener('submit', function(event) {
-      event.preventDefault(); // Prevent the default form submission
+      event.preventDefault(); 
   
       const emailInput = form.querySelector('input[type="email"]');
       const email = emailInput.value;
   
-      const scriptURL = 'https://script.google.com/macros/s/AKfycbwAGB3n_H8QzNI9A5TJPB5l3ZMCgxosi7UIfg0hgmpLacAQMSpCYtA2I8XxBOTtebam/exec';
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbx303FV5-kcdfx8aoN2OcbmIKHKn337EbTeWe-eidJHF0LTUzjTQ85eq3camkt8_Hgr/exec';
   
       const formData = new FormData();
       formData.append('email', email);
