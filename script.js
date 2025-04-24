@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const emailInput = form.querySelector('input[type="email"]');
       const email = emailInput.value;
   
-      const scriptURL = 'leadelle.netlify.app';
+      const scriptURL = 'https://leadelle.netlify.app';
   
       const formData = new FormData();
       formData.append('email', email);
