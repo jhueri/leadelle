@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Initiatives | Leadelle</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="initiatives.css">
+</head>
+<body>
+  <header>
+    <div class="logo">Leadelle</div>
+    <nav>
+      <a href="home.html">Home</a>
+      <a href="initiatives.html" class="active">Initiatives</a>
+      <a href="resources.html">Resources</a>
+      <a href="about.html">About</a>
+    </nav>
+  </header>
+
+  <section class="initiatives-hero">
+    <div class="hero-content">
+      <h1>Empowering Through Action</h1>
+      <p>Discover inspiring projects founded and led by young women who are changing the world one initiative at a time.</p>
+    </div>
+  </section>
+
+  <section class="filters-section">
+    <div class="filter-container">
+      <div class="filter-group">
+        <h3>Categories</h3>
+        <div class="filter-buttons">
+          <button class="filter-btn active" data-filter="category" data-value="all">All</button>
+          <button class="filter-btn" data-filter="category" data-value="education">Education</button>
+          <button class="filter-btn" data-filter="category" data-value="health">Health & Wellness</button>
+          <button class="filter-btn" data-filter="category" data-value="business">Business & Finance</button>
+          <button class="filter-btn" data-filter="category" data-value="stem">STEM</button>
+          <button class="filter-btn" data-filter="category" data-value="justice">Social Justice</button>
+          <button class="filter-btn" data-filter="category" data-value="arts">Arts</button>
+          <button class="filter-btn" data-filter="category" data-value="environment">Environment</button>
+          <button class="filter-btn" data-filter="category" data-value="community">Community</button>
+          <button class="filter-btn" data-filter="category" data-value="global">Global Impact</button>
+        </div>
+      </div>
+      
+      <div class="filter-group">
+        <h3>Initiative Types</h3>
+        <div class="filter-buttons">
+          <button class="filter-btn active" data-filter="type" data-value="all">All Types</button>
+          <button class="filter-btn" data-filter="type" data-value="nonprofit">Nonprofit</button>
+          <button class="filter-btn" data-filter="type" data-value="publication">Magazine/Publication</button>
+          <button class="filter-btn" data-filter="type" data-value="podcast">Podcast/Media</button>
+          <button class="filter-btn" data-filter="type" data-value="event">Event Series</button>
+          <button class="filter-btn" data-filter="type" data-value="campaign">Campaign</button>
+          <button class="filter-btn" data-filter="type" data-value="club">Club</button>
+          <button class="filter-btn" data-filter="type" data-value="tech">Tech Product</button>
+          <button class="filter-btn" data-filter="type" data-value="creative">Creative Project</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="initiatives-grid">
+    <div class="grid-container">
+      <!-- Initiative 1 -->
+      <div class="initiative-card" data-category="education community" data-type="nonprofit">
+        <div class="card-image">
+          <img src="/api/placeholder/400/250" alt="Girls Code Initiative">
+        </div>
+        <div class="card-content">
+          <h3>Girls Code Initiative</h3>
+          <p>Teaching coding skills to young girls in underserved communities through weekend workshops and mentorship programs.</p>
+          <div class="tags">
+            <span class="tag category-tag">Education</span>
+            <span class="tag category-tag">Community</span>
+            <span class="tag type-tag">Nonprofit</span>
+          </div>
+          <a href="#" class="learn-more">Learn More</a>
+        </div>
+      </div>
+
+      <!-- Initiative 2 -->
+      <div class="initiative-card" data-category="health" data-type="campaign">
+        <div class="card-image">
+          <img src="/api/placeholder/400/250" alt="Teen Mental Health Project">
+        </div>
+        <div class="card-content">
+          <h3>Teen Mental Health Project</h3>
+          <p>A campaign to break stigmas around mental health through youth-led discussions, resource sharing, and peer support groups.</p>
+          <div class="tags">
+            <span class="tag category-tag">Health & Wellness</span>
+            <span class="tag type-tag">Campaign</span>
+          </div>
+          <a href="#" class="learn-more">Learn More</a>
+        </div>
+      </div>
+
+      <!-- Initiative 3 -->
+      <div class="initiative-card" data-category="environment global" data-type="nonprofit tech">
+        <div class="card-image">
+          <img src="/api/placeholder/400/250" alt="EcoSisters">
+        </div>
+        <div class="card-content">
+          <h3>EcoSisters</h3>
+          <p>Connecting young environmental activists across the globe to collaborate on sustainable solutions and community projects.</p>
+          <div class="tags">
+            <span class="tag category-tag">Environment</span>
+            <span class="tag category-tag">Global Impact</span>
+            <span class="tag type-tag">Nonprofit</span>
+            <span class="tag type-tag">Tech Product</span>
+          </div>
+          <a href="#" class="learn-more">Learn More</a>
+        </div>
+      </div>
+
+      <!-- Initiative 4 -->
+      <div class="initiative-card" data-category="business" data-type="publication">
+        <div class="card-image">
+          <img src="/api/placeholder/400/250" alt="Young Entrepreneur Magazine">
+        </div>
+        <div class="card-content">
+          <h3>Young Entrepreneur Magazine</h3>
+          <p>A digital publication showcasing stories of young women entrepreneurs and providing resources for aspiring business owners.</p>
+          <div class="tags">
+            <span class="tag category-tag">Business & Finance</span>
+            <span class="tag type-tag">Magazine/Publication</span>
+          </div>
+          <a href="#" class="learn-more">Learn More</a>
+        </div>
+      </div>
+
+      <!-- Initiative 5 -->
+      <div class="initiative-card" data-category="arts" data-type="event creative">
+        <div class="card-image">
+          <img src="/api/placeholder/400/250" alt="ArtVoices Festival">
+        </div>
+        <div class="card-content">
+          <h3>ArtVoices Festival</h3>
+          <p>An annual festival showcasing artwork, performances, and creative expressions by young women addressing social issues.</p>
+          <div class="tags">
+            <span class="tag category-tag">Arts</span>
+            <span class="tag type-tag">Event Series</span>
+            <span class="tag type-tag">Creative Project</span>
+          </div>
+          <a href="#" class="learn-more">Learn More</a>
+        </div>
+      </div>
+
+      <!-- Initiative 6 -->
+      <div class="initiative-card" data-category="stem education" data-type="club">
+        <div class="card-image">
+          <img src="/api/placeholder/400/250" alt="Future Scientists Club">
+        </div>
+        <div class="card-content">
+          <h3>Future Scientists Club</h3>
+          <p>A network of after-school clubs encouraging girls to explore different branches of science through experiments and field trips.</p>
+          <div class="tags">
+            <span class="tag category-tag">STEM</span>
+            <span class="tag category-tag">Education</span>
+            <span class="tag type-tag">Club</span>
+          </div>
+          <a href="#" class="learn-more">Learn More</a>
+        </div>
+      </div>
+
+      <!-- Initiative 7 -->
+      <div class="initiative-card" data-category="justice" data-type="podcast">
+        <div class="card-image">
+          <img src="/api/placeholder/400/250" alt="Change Makers Podcast">
+        </div>
+        <div class="card-content">
+          <h3>Change Makers Podcast</h3>
+          <p>A podcast series interviewing young activists and sharing stories of youth-led movements creating positive social change.</p>
+          <div class="tags">
+            <span class="tag category-tag">Social Justice</span>
+            <span class="tag type-tag">Podcast/Media</span>
+          </div>
+          <a href="#" class="learn-more">Learn More</a>
+        </div>
+      </div>
+
+      <!-- Initiative 8 -->
+      <div class="initiative-card" data-category="global justice" data-type="campaign nonprofit">
+        <div class="card-image">
+          <img src="/api/placeholder/400/250" alt="GirlsRise">
+        </div>
+        <div class="card-content">
+          <h3>GirlsRise</h3>
+          <p>A campaign advocating for girls' education rights globally through awareness events, fundraising, and partnerships with schools.</p>
+          <div class="tags">
+            <span class="tag category-tag">Global Impact</span>
+            <span class="tag category-tag">Social Justice</span>
+            <span class="tag type-tag">Campaign</span>
+            <span class="tag type-tag">Nonprofit</span>
+          </div>
+          <a href="#" class="learn-more">Learn More</a>
+        </div>
+      </div>
+
+      <!-- Initiative 9 -->
+      <div class="initiative-card" data-category="community business" data-type="event">
+        <div class="card-image">
+          <img src="/api/placeholder/400/250" alt="Local Marketplace Project">
+        </div>
+        <div class="card-content">
+          <h3>Local Marketplace Project</h3>
+          <p>A series of pop-up markets where young entrepreneurs can showcase and sell their products while building community connections.</p>
+          <div class="tags">
+            <span class="tag category-tag">Community</span>
+            <span class="tag category-tag">Business & Finance</span>
+            <span class="tag type-tag">Event Series</span>
+          </div>
+          <a href="#" class="learn-more">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="featured-initiatives">
+    <h2>Featured Stories</h2>
+    
+    <div class="featured-item">
+      <div class="featured-image">
+        <img src="/api/placeholder/600/400" alt="EcoSisters Featured">
+      </div>
+      <div class="featured-content">
+        <span class="featured-label">Spotlight</span>
+        <h3>EcoSisters: Connecting Global Climate Advocates</h3>
+        <p>What began as a small Discord server has grown into a global network of over 5,000 young women tackling climate change in their local communities while sharing resources and strategies internationally.</p>
+        <p class="featured-quote">"We wanted to create a space where young women didn't feel alone in their environmental advocacy. Now we have members on six continents working together on solutions."</p>
+        <span class="quote-author">— Maya Chen, Founder</span>
+        <a href="#" class="featured-link">Read Their Story</a>
+      </div>
+    </div>
+    
+    <div class="featured-item reverse">
+      <div class="featured-image">
+        <img src="/api/placeholder/600/400" alt="ArtVoices Festival Featured">
+      </div>
+      <div class="featured-content">
+        <span class="featured-label">Impact Story</span>
+        <h3>How ArtVoices Festival Amplifies Youth Expression</h3>
+        <p>Last year's festival brought together over 200 young artists from diverse backgrounds, creating a powerful platform for artistic expression focused on social change and community healing.</p>
+        <p class="featured-quote">"ArtVoices gave me the confidence to use my art as a tool for advocacy. I've since started workshops in my own community teaching others how to do the same."</p>
+        <span class="quote-author">— Sophia Washington, Participant</span>
+        <a href="#" class="featured-link">See The Gallery</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="initiatives-cta">
+    <div class="cta-content">
+      <h2>Have Your Own Initiative?</h2>
+      <p>Your story could inspire others to take action. Share your project with our community and gain visibility for your important work.</p>
+      <button class="submit-btn">Submit Your Initiative</button>
+    </div>
+  </section>
+
+  <button id="scroll-top" class="scroll-top-btn" aria-label="Scroll to top">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M12 5L19 12L17.6 13.4L13 8.8V19H11V8.8L6.4 13.4L5 12L12 5Z" fill="currentColor"/>
+    </svg>
+  </button>
+
+  <footer>
+    <div class="footer-nav">
+      <a href="#">Home</a>
+      <a href="#">Initiatives</a>
+      <a href="#">Resources</a>
+      <a href="#">About</a>
+    </div>
+    <div class="footer-social">
+      <a href="https://www.instagram.com/leadellehq/" target="_blank"><img src="assets/instagram.png" alt="Instagram"></a>
+      <a href="https://www.linkedin.com/company/leadelle/" target="_blank"><img src="assets/linkedin.png" alt="LinkedIn"></a>
+    </div>
+    <div class="footer-logo">
+      <img src="assets/logo.png" alt="Leadelle Logo">
+    </div>
+  </footer>
+
+  <script src="initiatives.js"></script>
+</body>
+</html>
