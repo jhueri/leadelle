@@ -1,3 +1,13 @@
+@font-face {
+    font-family: Nunito;
+    src: url(assets/Nunito/Nunito-VariableFont_wght.ttf)
+}
+  
+  @font-face {
+    font-family: Playwrite;
+    src: url(assets/Playwrite_IE/PlaywriteIE-VariableFont_wght.ttf);
+}
+
 :root {
     --color-1: #112540;
     --color-2: #3A5880;
@@ -9,9 +19,44 @@
   
   body {
     margin: 0;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Nunito', sans-serif;
     background-color: var(--color-6);
     color: var(--color-1);
+  }
+
+  .sparkle {
+    position: absolute;
+    width: 12px; 
+    height: 12px; 
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5); 
+    pointer-events: none; 
+    animation: float 8s linear infinite, twinkle 3s linear infinite;
+    z-index: 0;
+  }
+
+  @keyframes float {
+    0% {
+      transform: translateY(0) translateX(0);
+    }
+    50% {
+      transform: translateY(10px) translateX(5px);
+    }
+    100% {
+      transform: translateY(0) translateX(0);
+    }
+  }
+
+  @keyframes twinkle {
+    0% {
+      opacity: 0.5;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0.5;
+    }
   }
   
   header {
@@ -21,6 +66,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
+    font-family: 'Nunito';
   }
   
   nav a {
@@ -29,21 +75,29 @@
     text-decoration: none;
     font-weight: 600;
   }
+
+  .logo {
+    font-family: 'Playwrite';
+    font-size: 20px;
+  }
   
   .hero {
     text-align: center;
     padding: 4rem 2rem;
-    background-color: var(--color-4);
+    background: linear-gradient(to bottom right, var(--color-4), var(--color-2), var(--color-1));
+    position: relative;
+    z-index: 1;
   }
   
   .hero h1 {
     font-size: 2.5rem;
-    color: var(--color-1);
+    color: var(--color-6);
   }
   
   .hero p {
     font-size: 1.2rem;
     margin: 1rem 0 2rem;
+    color: var(--color-6);
   }
   
   .hero button {
@@ -55,14 +109,21 @@
     background-color: var(--color-3);
     border-radius: 5px;
     cursor: pointer;
+    font-family: 'Nunito', sans-serif;
   }
   
   section {
     padding: 3rem 2rem;
   }
+
+  /* FEATURED */
   
   .featured {
     text-align: center;
+  }
+
+  .featured h2 {
+    text-align: left;
   }
   
   .grid {
@@ -77,6 +138,7 @@
     padding: 1rem;
     border-radius: 10px;
     background-color: var(--color-6);
+    text-align: left;
   }
   
   .initiative img {
@@ -110,18 +172,24 @@
     font-weight: 600;
     cursor: pointer;
   }
+
+  /* WHAT IS LEADELLE? */
   
   .about, .why {
-    max-width: 800px;
+    max-width: 1000px;
     margin: 0 auto;
-    text-align: center;
+    text-align: left;
   }
   
   .why img {
-    width: 150px;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
     border-radius: 50%;
-    margin-top: 1rem;
+    overflow: hidden;
   }
+
+  /* RESOURCES PREVIEW */
   
   .resources {
     text-align: center;
@@ -142,6 +210,8 @@
     padding: 1.5rem;
     border-radius: 10px;
   }
+
+  /* SUBMIT YOUR INITATIVE */
   
   .cta {
     text-align: center;
@@ -158,6 +228,8 @@
     font-weight: 800;
     color: var(--color-2);
   }
+
+  /* FOOTER */
   
   footer {
     background-color: var(--color-1);
@@ -170,4 +242,8 @@
     color: var(--color-6);
     margin: 0 1rem;
     text-decoration: none;
-  }  
+  } 
+  
+  footer img {
+    max-width: 5%;
+  }
