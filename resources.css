@@ -1,0 +1,365 @@
+@font-face {
+    font-family: Nunito;
+    src: url(assets/Nunito/Nunito-VariableFont_wght.ttf)
+  }
+  
+  @font-face {
+    font-family: Playwrite;
+    src: url(assets/Playwrite_IE/PlaywriteIE-VariableFont_wght.ttf);
+  }
+
+:root {
+    --color-1: #112540;
+    --color-2: #3A5880;
+    --color-3: #F59BA3;
+    --color-4: #FCD8DC;
+    --color-5: #ABABAB;
+    --color-6: #FFFFFF;
+    --shadow-soft: 0 8px 20px rgba(245, 155, 163, 0.1);
+    --shadow-medium: 0 12px 28px rgba(17, 37, 64, 0.15);
+    --transition-default: all 0.3s ease;
+  }
+
+  p {
+    font-family: 'Nunito', sans-serif;
+  }
+  
+  .coming-soon-container {
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 60px 20px;
+    background-color: var(--color-6);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .content-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+  }
+  
+  .decorative-shape {
+    position: absolute;
+    border-radius: 50%;
+    z-index: 1;
+  }
+  
+  .shape-left {
+    width: 300px;
+    height: 300px;
+    background-color: var(--color-4);
+    left: -150px;
+    top: 20%;
+    opacity: 0.6;
+  }
+  
+  .shape-right {
+    width: 400px;
+    height: 400px;
+    background-color: var(--color-4);
+    right: -150px;
+    bottom: 20%;
+    opacity: 0.6;
+  }
+  
+  .coming-soon-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: var(--color-1);
+    line-height: 1.2;
+  }
+  
+  .accent {
+    color: var(--color-3);
+  }
+  
+  .coming-soon-text {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    max-width: 650px;
+    margin: 0 auto 50px;
+    color: var(--color-2);
+  }
+  
+  .features-preview {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 80px;
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 1200px;
+  }
+  
+  .feature-item {
+    background-color: var(--color-6);
+    border-radius: 16px;
+    padding: 30px;
+    width: 280px;
+    box-shadow: var(--shadow-medium);
+    text-align: left;
+    transition: var(--transition-default);
+    border: 1px solid var(--color-4);
+  }
+  
+  .feature-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(245, 155, 163, 0.2);
+  }
+  
+  .feature-icon {
+    background-color: var(--color-4);
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+    transition: var(--transition-default);
+  }
+  
+  .feature-item:hover .feature-icon {
+    background-color: var(--color-3);
+  }
+  
+  .feature-icon svg {
+    width: 35px;
+    height: 35px;
+    color: var(--color-3);
+    transition: var(--transition-default);
+  }
+  
+  .feature-item:hover .feature-icon svg {
+    color: var(--color-6);
+  }
+  
+  .feature-title {
+    font-weight: 600;
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    color: var(--color-1);
+  }
+  
+  .feature-desc {
+    color: var(--color-2);
+    line-height: 1.7;
+    font-weight: 300;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 900px) {
+    .coming-soon-title {
+      font-size: 3rem;
+    }
+    
+    .features-preview {
+      gap: 20px;
+    }
+    
+    .feature-item {
+      width: calc(50% - 40px);
+      padding: 25px;
+    }
+    
+    .footer-content {
+      flex-direction: column;
+      text-align: center;
+    }
+    
+    .footer-logo {
+      text-align: center;
+      order: -1;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    header {
+      flex-direction: column;
+      gap: 15px;
+      padding: 15px 5%;
+    }
+    
+    .coming-soon-title {
+      font-size: 2.5rem;
+    }
+    
+    .email-input-container {
+      flex-direction: column;
+      border-radius: 16px;
+      overflow: visible;
+    }
+    
+    .email-input {
+      width: 100%;
+      border-radius: 16px;
+      margin-bottom: 15px;
+      box-shadow: var(--shadow-soft);
+    }
+    
+    .notify-btn {
+      width: 100%;
+      border-radius: 16px;
+      box-shadow: var(--shadow-soft);
+    }
+    
+    .feature-item {
+      width: 100%;
+    }
+    
+    .footer-nav {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .coming-soon-title {
+      font-size: 2rem;
+    }
+    
+    .coming-soon-text {
+      font-size: 1rem;
+    }
+    
+    nav {
+      gap: 15px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+
+  .scroll-animation {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+    transition-delay: 0.1s;
+}
+
+.scroll-animation.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.feature-item.scroll-animation {
+    transform: translateY(70px);
+}
+
+.email-input-container {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.email-input-container.focused {
+    box-shadow: 0 10px 25px rgba(245, 155, 163, 0.25);
+    transform: translateY(-3px);
+}
+
+.email-input.error {
+    animation: shake 0.5s ease-in-out;
+    border: 1px solid var(--color-3);
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    20%, 60% { transform: translateX(-5px); }
+    40%, 80% { transform: translateX(5px); }
+}
+
+.notify-btn.success {
+    background-color: var(--color-1);
+}
+
+.success-message {
+    color: var(--color-1);
+    font-size: 0.9rem;
+    margin-top: 10px;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+
+.success-message.fade-out {
+    opacity: 0;
+}
+
+.content-wrapper.scroll-animation {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1.4s ease, transform 1.4s ease; 
+    transition-delay: 0.3s; 
+}
+
+.content-wrapper.scroll-animation.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.coming-soon-title {
+    transition: opacity 1.6s ease, transform 1.6s ease;
+}
+
+.scroll-animation {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+    transition-delay: 0.1s;
+}
+
+.scroll-animation.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.decorative-shape {
+    position: absolute;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.shape-left {
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, var(--color-3) 0%, rgba(252, 216, 220, 0.5) 40%, rgba(252, 216, 220, 0) 70%);
+    left: -150px;
+    top: 20%;
+}
+
+.shape-right {
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, var(--color-4) 0%, rgba(245, 155, 163, 0.3) 50%, rgba(245, 155, 163, 0) 75%);
+    right: -200px;
+    bottom: 10%;
+}
+
+.decorative-shape.scroll-animation {
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.decorative-shape.active {
+    opacity: 1; 
+    transform: scale(1);
+}
+
+.shape-left.scroll-animation {
+    transition-delay: 0.3s;
+}
+
+.shape-right.scroll-animation {
+    transition-delay: 0.5s;
+}
+
+.notify-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(245, 155, 163, 0.3);
+}

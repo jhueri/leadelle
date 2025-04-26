@@ -188,7 +188,7 @@ nav a:hover::after {
 }
 
 .hero h1 {
-  font-size: 2.8rem;
+  font-size: 2.6rem;
   color: var(--color-6);
   text-shadow: 0 2px 10px rgba(17, 37, 64, 0.3);
   animation: fadeInUp 1s ease-out;

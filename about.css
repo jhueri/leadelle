@@ -1,0 +1,274 @@
+@font-face {
+    font-family: Nunito;
+    src: url(assets/Nunito/Nunito-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: Playwrite;
+    src: url(assets/Playwrite_IE/PlaywriteIE-VariableFont_wght.ttf);
+}
+
+:root {
+    --color-1: #112540;
+    --color-2: #3A5880;
+    --color-3: #F59BA3;
+    --color-4: #FCD8DC;
+    --color-5: #ABABAB;
+    --color-6: #FFFFFF;
+    --shadow-soft: 0 8px 20px rgba(245, 155, 163, 0.1);
+    --shadow-medium: 0 12px 28px rgba(17, 37, 64, 0.15);
+    --transition-default: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    color: var(--color-1);
+    background-color: var(--color-6);
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-family: 'Nunito', serif;
+    font-weight: 600;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, var(--color-4) 0%, var(--color-6) 100%);
+    padding: 120px 0 80px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-bubble {
+    position: absolute;
+    border-radius: 50%;
+    background-color: rgba(245, 155, 163, 0.1);
+    z-index: 1;
+}
+
+.mission p {
+    text-align: left;
+}
+
+.container h2 {
+    color: var(--color-1);
+}
+
+.bubble-1 {
+    width: 300px;
+    height: 300px;
+    top: -100px;
+    left: 10%;
+    animation: float 8s infinite ease-in-out;
+}
+
+.bubble-2 {
+    width: 200px;
+    height: 200px;
+    bottom: -50px;
+    right: 15%;
+    animation: float 6s infinite ease-in-out reverse;
+}
+
+.bubble-3 {
+    width: 150px;
+    height: 150px;
+    top: 50%;
+    right: 5%;
+    animation: float 10s infinite ease-in-out;
+}
+
+.support-note {
+    text-align: left;
+}
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0); }
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    color: var(--color-1);
+    line-height: 1.2;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    max-width: 700px;
+    margin: 0 auto;
+    color: var(--color-2);
+}
+
+/* Mission Section */
+.mission {
+    padding: 100px 0;
+    text-align: center;
+}
+
+.mission h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    position: relative;
+    display: inline-block;
+}
+
+.mission h2:after {
+    content: "";
+    position: absolute;
+    width: 60%;
+    height: 3px;
+    background-color: var(--color-3);
+    bottom: -10px;
+    left: 20%;
+}
+
+.mission p {
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin: 0 auto 20px;
+}
+
+/* Support Section */
+.support {
+    padding: 80px 0;
+    background-color: var(--color-4);
+}
+
+.support-inner {
+    background-color: var(--color-6);
+    border-radius: 20px;
+    padding: 60px;
+    box-shadow: var(--shadow-soft);
+    text-align: center;
+}
+
+.support h2 {
+    font-size: 2.5rem;
+    color: var(--color-1);
+    margin-bottom: 40px;
+}
+
+.support-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    margin: 40px 0;
+}
+
+.support-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.support-icon {
+    width: 80px;
+    height: 80px;
+    background-color: var(--color-4);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+    transition: var(--transition-default);
+}
+
+.support-icon img {
+    width: 40px;
+    height: 40px;
+}
+
+.support-item h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: var(--color-2);
+}
+
+.support-note {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: rgba(245, 155, 163, 0.1);
+    border-radius: 10px;
+    font-style: italic;
+}
+
+/* Get Involved Section */
+.get-involved {
+    padding: 100px 0;
+    text-align: center;
+}
+
+.get-involved h2 {
+    font-size: 2.5rem;
+    color: var(--color-1);
+    margin-bottom: 30px;
+}
+
+.get-involved p {
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto 40px;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: var(--color-3);
+    color: white;
+    padding: 15px 40px;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-decoration: none;
+    box-shadow: var(--shadow-soft);
+    transition: var(--transition-default);
+}
+
+.cta-button:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-medium);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero p {
+        font-size: 1.1rem;
+    }
+    
+    .mission h2, .support h2, .get-involved h2 {
+        font-size: 2rem;
+    }
+    
+    .support-inner {
+        padding: 40px 20px;
+    }
+    
+    .support-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+}
