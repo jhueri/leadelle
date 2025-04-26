@@ -1476,3 +1476,4 @@ nav a.active::after {
   .featured-item, .featured-item.reverse {
       flex-direction: column;
   }
+}
