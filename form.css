@@ -1,0 +1,37 @@
+.form-container {
+    background-color: rgba(245, 155, 163, 0.1); 
+    padding: 3rem 2rem;
+    border-radius: 20px;
+    max-width: 900px;
+    margin: 3rem auto;
+    background: linear-gradient(to bottom right, var(--color-4), var(--color-2), var(--color-1)); /* Gradient to match homepage */
+    text-align: center;
+  }
+  
+  /* Form Heading */
+  .form-container h2 {
+    font-size: 2.5rem;
+    color: var(--color-6);
+    font-weight: 700;
+    margin-bottom: 2rem;
+    position: relative;
+  }
+  
+  .form-container h2::after {
+    content: '';
+    position: absolute;
+    width: 60%;
+    height: 3px;
+    background-color: var(--color-3);
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2px;
+  }
+  
+  /* Form Background Styling (for when it's embedded) */
+  .google-form-embed {
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: var(--shadow-soft);
+  }  
