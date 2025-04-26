@@ -74,14 +74,5 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     });
   }
-  
-  // Handle form submission for initiative submission (if implemented)
-  const submitButton = document.querySelector('.submit-btn');
-  if (submitButton) {
-    submitButton.addEventListener('click', function() {
-      // This would typically open a form or redirect to a submission page
-      alert('Coming soon: Submit your initiative form!');
-      // Alternatively, you could replace this with a modal or form display logic
-    });
-  }
+
 });
