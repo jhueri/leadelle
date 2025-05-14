@@ -4,11 +4,10 @@
     border-radius: 20px;
     max-width: 900px;
     margin: 3rem auto;
-    background: linear-gradient(to bottom right, var(--color-4), var(--color-2), var(--color-1)); /* Gradient to match homepage */
+    background: linear-gradient(to bottom right, var(--color-4), var(--color-2), var(--color-1)); 
     text-align: center;
   }
   
-  /* Form Heading */
   .form-container h2 {
     font-size: 2.5rem;
     color: var(--color-6);
@@ -29,7 +28,6 @@
     border-radius: 2px;
   }
   
-  /* Form Background Styling (for when it's embedded) */
   .google-form-embed {
     padding: 2rem;
     border-radius: 15px;
