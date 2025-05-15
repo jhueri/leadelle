@@ -1,78 +1,133 @@
-// Wait for the DOM to be fully loaded
 document.addEventListener('DOMContentLoaded', function() {
-  // Initialize filter state
-  const filterState = {
+  // Filter functionality
+  let activeFilters = {
     category: 'all',
-    type: 'all'
+    type: 'all',
+    opportunity: 'all'
   };
 
-  // Get all filter buttons and initiative cards
   const filterButtons = document.querySelectorAll('.filter-btn');
   const initiativeCards = document.querySelectorAll('.initiative-card');
-  
+
+  // Initialize filters
+  filterCards();
+
   // Add click event listeners to all filter buttons
   filterButtons.forEach(button => {
     button.addEventListener('click', function() {
-      // Get filter type (category or type) and value
       const filterType = this.getAttribute('data-filter');
       const filterValue = this.getAttribute('data-value');
       
-      // Update filter state
-      filterState[filterType] = filterValue;
-      
-      // Update active class for buttons in the same filter group
-      const filterGroup = this.closest('.filter-group');
-      filterGroup.querySelectorAll('.filter-btn').forEach(btn => {
+      // Update active state on buttons in the same filter group
+      document.querySelectorAll(`.filter-btn[data-filter="${filterType}"]`).forEach(btn => {
         btn.classList.remove('active');
       });
       this.classList.add('active');
       
-      // Apply filters
-      applyFilters();
+      // Update active filters
+      activeFilters[filterType] = filterValue;
+      
+      // Filter cards based on updated filters
+      filterCards();
     });
   });
 
-  // Function to apply filters based on current filter state
-  function applyFilters() {
+  // Function to filter cards based on active filters
+  function filterCards() {
     initiativeCards.forEach(card => {
-      const cardCategories = card.getAttribute('data-category')?.split(' ') || [];
-      const cardTypes = card.getAttribute('data-type')?.split(' ') || [];
+      let showCard = true;
       
-      const matchesCategory = filterState.category === 'all' || 
-                             cardCategories.includes(filterState.category);
+      // Check category filter
+      if (activeFilters.category !== 'all') {
+        const cardCategories = card.getAttribute('data-category');
+        if (!cardCategories || !cardCategories.includes(activeFilters.category)) {
+          showCard = false;
+        }
+      }
       
-      const matchesType = filterState.type === 'all' || 
-                         cardTypes.includes(filterState.type);
+      // Check type filter
+      if (activeFilters.type !== 'all') {
+        const cardTypes = card.getAttribute('data-type');
+        if (!cardTypes || !cardTypes.includes(activeFilters.type)) {
+          showCard = false;
+        }
+      }
       
-      // Show card only if it matches both filters
-      if (matchesCategory && matchesType) {
+      // Check opportunity filter
+      if (activeFilters.opportunity !== 'all') {
+        const cardOpportunities = card.getAttribute('data-opportunity');
+        if (!cardOpportunities || !cardOpportunities.includes(activeFilters.opportunity)) {
+          showCard = false;
+        }
+      }
+      
+      // Show or hide the card
+      if (showCard) {
         card.style.display = 'block';
       } else {
         card.style.display = 'none';
       }
     });
   }
+
+  // Function to handle apply button clicks
+  function handleApplyClick(event) {
+    event.preventDefault();
+    
+    // Get the initiative name from the parent card
+    const card = event.target.closest('.initiative-card');
+    const initiativeName = card.querySelector('h3').textContent;
+    
+    // Open a modal or form for application
+    // For now, we'll use a simple alert
+    alert(`Thank you for your interest in applying to ${initiativeName}! This feature will direct you to the application form in the future.`);
+    
+    // In a real implementation, you would redirect to an application form:
+    // window.location.href = "application-form.html?initiative=" + encodeURIComponent(initiativeName);
+  }
+  
+  // Find all cards with opportunity data attributes
+  const opportunityCards = document.querySelectorAll('.initiative-card[data-opportunity]');
+  
+  // Enhance these cards with apply buttons
+  opportunityCards.forEach(card => {
+    const learnMoreLink = card.querySelector('.learn-more');
+    const cardContent = card.querySelector('.card-content');
+    
+    // Create a container for the buttons
+    const actionsDiv = document.createElement('div');
+    actionsDiv.className = 'card-actions';
+    
+    // Create and add the learn more button clone if it exists
+    if (learnMoreLink) {
+      const learnMoreClone = learnMoreLink.cloneNode(true);
+      actionsDiv.appendChild(learnMoreClone);
+      learnMoreLink.style.display = 'none'; // Hide original but don't remove
+    }
+    
+    // Add the actions div to the card
+    cardContent.appendChild(actionsDiv);
+  });
   
   // Scroll to top button functionality
   const scrollTopButton = document.getElementById('scroll-top');
-  
   if (scrollTopButton) {
-    // Show/hide the button based on scroll position
-    window.addEventListener('scroll', function() {
+    // Initially hide the button
+    scrollTopButton.style.display = 'none';
+    
+    window.addEventListener('scroll', () => {
       if (window.pageYOffset > 300) {
-        scrollTopButton.classList.add('visible');
+        scrollTopButton.style.display = 'block';
       } else {
-        scrollTopButton.classList.remove('visible');
+        scrollTopButton.style.display = 'none';
       }
     });
-    
-    // Scroll to top when clicked
-    scrollTopButton.addEventListener('click', function() {
+
+    scrollTopButton.addEventListener('click', () => {
       window.scrollTo({
         top: 0,
         behavior: 'smooth'
       });
     });
   }
-
 });

@@ -1,0 +1,73 @@
+.opportunity-badge {
+    display: inline-block;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  animation: pulse 2s infinite;
+  }
+
+.volunteer-badge {
+  background: #F59BA3;
+}
+
+.intern-badge {
+  background: #3A5880;
+}
+
+/* Apply Button Styles */
+.apply-btn {
+  display: inline-block;
+  background: linear-gradient(135deg, #3A5880, #112540);
+  color: white;
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: 24px;
+  text-decoration: none;
+  margin-left: 10px;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 0.5px;
+}
+
+.apply-btn:hover {
+  background: linear-gradient(135deg, #F59BA3, #FCD8DC);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+}
+
+.apply-btn:active {
+  transform: translateY(1px);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.card-actions {
+ display: flex;
+  margin-top: 15px;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 15px;
+}
+
+/* Adjust the learn more link to work with the new layout */
+.card-content .learn-more {
+  margin-right: auto;
+}
+  
+  /* Position badges at top of card content for visibility */
+  .card-badges {
+    display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 12px;
+  }
+
