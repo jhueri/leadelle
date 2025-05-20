@@ -990,6 +990,24 @@ footer a:hover::after {
       text-align: center;
       max-width: 50%;
   }
+
+  .initiatives-grid .grid-container {
+    grid-template-columns: 1fr; /* One column on mobile */
+  }
+  
+  .initiative {
+    max-width: 100%; /* Ensure cards take full width */
+    margin-bottom: 1.5rem; /* Add some spacing between cards */
+  }
+  
+  .initiative img {
+    height: auto; /* Allow image height to adjust proportionally */
+    max-height: 220px; /* Optional: slightly larger images on mobile */
+  }
+  
+  .initiative-content {
+    padding: 1.2rem; /* Slightly reduce padding on mobile */
+  }
 }
 
 .scroll-animation {
