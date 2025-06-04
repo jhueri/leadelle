@@ -1548,3 +1548,35 @@ nav a.active::after {
       flex-direction: column;
   }
 }
+
+.podcast-feature h2 {
+  font-size: 2.2rem;
+  text-align: center;
+}
+
+.podcast-feature p {
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 25px;
+  height: 0;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+}
+
+.accent {
+    color: var(--color-3);
+  }
+
+  
