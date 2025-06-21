@@ -131,3 +131,13 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 });
+      
+      // Add floating keyframes
+      const style = document.createElement('style');
+      style.textContent = `
+        @keyframes float {
+          0%, 100% { transform: translateY(0px); }
+          50% { transform: translateY(-5px); }
+        }
+      `;
+      document.head.appendChild(style);
