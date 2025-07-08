@@ -454,6 +454,20 @@ section {
   margin-bottom: 1.5rem;
 }
 
+.about p .icon {
+  font-size: 1.5rem;
+  color: var(--color-3);
+  margin-top: 0.1rem;
+  flex-shrink: 0;
+  width: 2rem;
+  text-align: center;
+  margin-right: 10px;
+  }
+
+  .about p .text {
+            flex: 1;
+        }
+
 .about::before {
   content: "";
   position: absolute;
