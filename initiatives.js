@@ -141,3 +141,21 @@ document.addEventListener('DOMContentLoaded', function() {
         }
       `;
       document.head.appendChild(style);
+
+// Show/hide scroll-to-top button
+window.addEventListener('scroll', () => {
+  const scrollBtn = document.getElementById('scroll-top');
+  if (window.scrollY > 600) {
+    scrollBtn.classList.add('visible');
+  } else {
+    scrollBtn.classList.remove('visible');
+  }
+});
+
+// Scroll to top when button clicked
+document.getElementById('scroll-top').addEventListener('click', () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+});
