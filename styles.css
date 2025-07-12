@@ -81,9 +81,9 @@ header {
   padding: 1rem 2rem;
   font-family: 'Nunito';
   box-shadow: 0 4px 12px rgba(17, 37, 64, 0.15);
-  position: relative;
   top: 0;
   z-index: 100;
+  position: sticky;
 }
 
 .logo {
