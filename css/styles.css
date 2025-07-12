@@ -1,11 +1,11 @@
 @font-face {
   font-family: Nunito;
-  src: url(assets/Nunito/Nunito-VariableFont_wght.ttf)
+  src: url(/assets/Nunito/Nunito-VariableFont_wght.ttf)
 }
 
 @font-face {
   font-family: Playwrite;
-  src: url(assets/Playwrite_IE/PlaywriteIE-VariableFont_wght.ttf);
+  src: url(/assets/Playwrite_IE/PlaywriteIE-VariableFont_wght.ttf);
 }
 
 :root {
