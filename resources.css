@@ -162,21 +162,19 @@
   }
 
   .resources-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Changed to exactly 2 columns */
-    gap: 3rem;
-    max-width: 1000px; /* Reduced from 1200px for better 2-column layout */
-    margin: 0 auto;
-    position: relative;
-    z-index: 2;
-  }
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 3rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 2;
+    }
 
-  /* Special handling for 3 cards in 2 columns - center the third card */
-  .resources-grid .resource-card:nth-child(3) {
-    grid-column: 1 / -1; /* Span both columns */
-    max-width: 450px; /* Limit width so it doesn't get too wide */
-    margin: 0 auto; /* Center it */
-  }
+  .material-symbols-outlined {
+      font-size: 2.5rem;
+      color: var(--color-3);
+    }
 
   .resource-card {
     background-color: var(--color-6);
